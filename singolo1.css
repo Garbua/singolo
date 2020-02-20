@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "Lato";
+    src: url("assets/fonts/Lato-Regular.eot"); /* IE9 Compat Modes */
+    src: url("assets/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("assets/fonts/Lato-Regular.otf") format("opentype"), /* Open Type Font */
+      url("assets/fonts/Lato-Regular.svg") format("svg"), /* Legacy iOS */
+      url("assets/fonts/Lato-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("assets/fonts/Lato-Regular.woff") format("woff"), /* Modern Browsers */
+      url("assets/fonts/Lato-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("assets/fonts/Lato-Bold.eot"); /* IE9 Compat Modes */
+    src: url("assets/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("assets/fonts/Lato-Bold.otf") format("opentype"), /* Open Type Font */
+      url("assets/fonts/Lato-Bold.svg") format("svg"), /* Legacy iOS */
+      url("assets/fonts/Lato-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("assets/fonts/Lato-Bold.woff") format("woff"), /* Modern Browsers */
+      url("assets/fonts/Lato-Bold.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("assets/fonts/Lato-Black.eot"); /* IE9 Compat Modes */
+    src: url("assets/fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("assets/fonts/Lato-Black.otf") format("opentype"), /* Open Type Font */
+      url("assets/fonts/Lato-Black.svg") format("svg"), /* Legacy iOS */
+      url("assets/fonts/Lato-Black.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("assets/fonts/Lato-Black.woff") format("woff"), /* Modern Browsers */
+      url("assets/fonts/Lato-Black.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("assets/fonts/Lato-Light.eot"); /* IE9 Compat Modes */
+    src: url("assets/fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("assets/fonts/Lato-Light.otf") format("opentype"), /* Open Type Font */
+      url("assets/fonts/Lato-Light.svg") format("svg"), /* Legacy iOS */
+      url("assets/fonts/Lato-Light.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("assets/fonts/Lato-Light.woff") format("woff"), /* Modern Browsers */
+      url("assets/fonts/Lato-Light.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Lato", "Verdana", sans-serif;
+}
+
+body {
+    font-size: 1.8rem;
+    width: 100%;
+    max-width: 1020px;
+    margin: auto;
+}
+
+.header {
+    font-weight: 700;
+    background-color: #2d303a;
+    color: #ffffff;
+    padding: 0 30px 0 30px;
+}
+
+.header-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    
+}
+
+.header-logo {
+    display: block;
+    width: 100%;
+    align-items: flex-end;
+    font-size: 2.5rem;
+    line-height: 0.253;
+    letter-spacing: -0.06rem;
+    margin: 42px 0 41.4px 0;
+}
+
+.header-logo-color {
+    color: #f06c64;
+}
+
+.header-navigation {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 0.527;
+    letter-spacing: -0.002rem;
+    margin: 9px 0 0 0;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 10;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a:hover {
+    color: #f06c64;
+}
+
+li:nth-child(n + 2)::before  {
+    color: #ffffff;
+    content: "·";
+    padding-left: 12.7px;
+    padding-right: 12.6px;
+}
+
+.header-bottom {
+    height: 6px;
+    background-color: #323746;
+}
+
+/* Image iphones */
+
+.image-iphones {
+    background-color: #f06c64;
+    padding: 0 30px 0 30px;
+}
+
+.arrow1, .arrow2 {
+    background: url("/assets/images/slider/chev.png") no-repeat;
+    display: block;
+    align-self: center;
+    margin-bottom: 5px;
+    width: 16px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.arrow1:hover, .arrow2:hover {
+    background: url("/assets/images/slider/chev-black.png") no-repeat;
+}
+
+.arrow2 {
+    transform: rotate(180deg);
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+}
+
+.images-two-iphones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex: 20 1 auto;
+    padding: 0 11px 0 11px;
+    margin: 53px 0 54px;
+}
+
+.image-bottom {
+    margin: auto;
+    height: 6px;
+    background-color: #ea676b;
+}
+
+.image-arrows {
+    flex: 1 1 auto;
+}
+
+.image-arrows.right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* services */
+
+.services {
+    background-color: #f2f2f2;
+    padding: 67px 30px 30px 30px;
+    color: #767e9e;
+}
+
+.layout-3-colum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
+h1, h2 {
+    font-size: 3rem;
+    line-height: 0.595;
+    font-weight: 900;
+    color: #666d89;
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 0.992;
+    margin-bottom: 10px;
+}
+
+.our-services {
+    padding: 0 10px 0 10px;
+}
+
+.our-services p {
+    line-height: 3rem;
+    font-weight: 300;
+    margin-top: 28px;
+    letter-spacing: 0.015rem;
+}
+
+.layout-3-colum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    margin-top: 47px;
+    height: 100%;
+}
+
+.layout-3-colum article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.layout-3-colum p {
+    font-size: 1.2rem;
+    line-height: 1.797;
+    font-weight: 400;
+}
+
+.colum-1, .colum-2, .colum-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 33.33%;
+}
+
+.layout-top, .layout-bottom {
+    padding-bottom: 33px;
+}
+
+.icon, .text {
+    padding: 0 10px 0 10px;
+}
+
+.text {
+    text-align: justify;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.services-bottom {
+    height: 6px;
+    background-color: #ffffff;
+}
