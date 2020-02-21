@@ -148,21 +148,23 @@ li:nth-child(n + 2)::before  {
 }
 
 .arrow1, .arrow2 {
-    background: url("/assets/images/slider/chev.png") no-repeat;
-    display: block;
-    align-self: center;
     margin-bottom: 5px;
-    width: 16px;
-    height: 27px;
-    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    border-top: 6px solid #ca4549;
+    border-left: 6px solid #ca4549;
+    border-radius: 4px;
+    transform: rotate(315deg);
+	cursor: pointer;
 }
 
 .arrow1:hover, .arrow2:hover {
-    background: url("/assets/images/slider/chev-black.png") no-repeat;
+    border-top: 6px solid #000000;
+    border-left: 6px solid #000000;
 }
 
 .arrow2 {
-    transform: rotate(180deg);
+    transform: rotate(135deg);
 }
 
 .images {
@@ -179,8 +181,8 @@ li:nth-child(n + 2)::before  {
     align-items: center;
     justify-content: space-around;
     flex: 20 1 auto;
-    padding: 0 11px 0 11px;
-    margin: 53px 0 54px;
+    padding: 0 7px 0 7px;
+    margin: 52.75px 0 54.25px;
 }
 
 .image-bottom {
@@ -190,13 +192,10 @@ li:nth-child(n + 2)::before  {
 }
 
 .image-arrows {
-    flex: 1 1 auto;
-}
-
-.image-arrows.right {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    flex: 1 1 auto;
+    justify-content: center;
 }
 
 /* services */
