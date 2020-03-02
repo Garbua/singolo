@@ -1,0 +1,272 @@
+@import "./fonts.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Lato", "Verdana", sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    width: 100%;
+    max-width: 1020px;
+    margin: auto;
+    font-weight: 300;
+    color: #f0d8d9;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.8rem;
+    font-weight: 900;
+}
+
+.info__title {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-weight: 900;
+}
+
+.info__text {
+    margin: 9px 0 21px 0;
+    letter-spacing: -0.003rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.get-a-quote {
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b ;
+    padding: 68px 0 30px 0;
+}
+
+.wrapper {
+    padding: 0 30px 0 30px;
+}
+
+.get-a-quote__top {
+    padding: 0 10px 0 10px;
+}
+
+.top-title {
+    letter-spacing: -0.02rem;
+}
+
+.top-description {
+    padding: 27px 0 0 0;
+    letter-spacing: 0.015rem;
+    line-height: 3.1rem;
+    margin-bottom: 42px;
+}
+
+.get-a-quote__layout {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: #f0d8d9;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.quote {
+    flex: 2 1 66.55%
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+}
+
+.form__input {
+    margin-bottom: 16px;
+    padding: 8.1px 14px 8.1px 14px;
+}
+
+.form__textarea {
+    margin-bottom: 16px;
+    padding: 7px 14px 0 14px;
+    height: 202px;
+    resize: none;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    border: 1px solid gold;
+}
+
+
+.form__btn {
+   width: 15%;
+   cursor: pointer;
+}
+
+.btn-submit:hover {
+    -webkit-filter: invert(100%);
+    transition: 0.5s;
+}
+
+.contact-info {
+    flex: 1 1 33.3%;
+    padding: 1px 10px 0 10px;
+}
+
+input,
+textarea,
+.btn-submit {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-family: "Lato", "Verdana", sans-serif;
+    font-weight: 400;
+    color: #f0d8d9;
+    background-color: #d6564f;
+    border-radius: 5px;
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    color: #f48c8f;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-family: "Lato", "Verdana", sans-serif;
+    font-weight: 400;
+}
+
+.contact__link-list {
+    list-style: none;
+}
+
+.link-list__item {
+    margin-bottom: -1.8px;
+}
+
+.item-email {
+    margin-top: 2px;
+}
+
+.item__link {
+    text-decoration: none;
+    color: #f0d8d9;
+    display: inline-flex;
+    align-items: center;
+}
+
+.item__link:hover {
+    filter: sepia(100%);
+}
+
+.link-text {
+    margin-left: 10px;
+}
+
+.icon {
+    width: 13px;
+}
+
+.icon-map {
+    display: block;
+    /* width: 7px; */
+    height: 11px;
+    background: url("./assets/quote/location.png") center no-repeat;
+}
+
+.icon-phone {
+    display: block;
+    /* width: 11px; */
+    height: 11px;
+    background: url("./assets/quote/phone.png") center no-repeat;
+}
+
+.icon-email {
+    display: block;
+    /* width: 13px; */
+    height: 8px;
+    background: url("./assets/quote/mail.png") center no-repeat;
+}
+
+.text-map {
+    letter-spacing: -0.015rem;
+}
+
+.text-tel {
+    margin-top: 1px;
+    margin-bottom: -2px;
+    letter-spacing: -0.015rem;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #2d303a;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px 0 40px;
+}
+
+.footer__copyright {
+    padding: 26px 0 0 2px;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: #666d89;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+}
+  
+.social-media {
+    display: flex;
+    margin: 22px 0 22px 0;
+    list-style-type: none;
+}
+
+.social-media a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #666d89;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-media a:hover {
+    -webkit-filter: invert(100%);
+}
+
+.facebook {
+    background: url("./assets/images/about/icons/facebook.png");
+}
+
+.google {
+    background: url("./assets/images/about/icons/google+.png");
+}
+
+.twitter {
+    background: url("./assets/images/about/icons/twitter.png");
+}
+
+.linkedin {
+    background: url("./assets/images/about/icons/linkedin.png");
+}
+
+
+
+
+
+
+
