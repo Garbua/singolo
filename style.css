@@ -35,6 +35,9 @@ ul {
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    max-width: 1020px;
     font-weight: 700;
     background-color: #2d303a;
     color: #ffffff;
@@ -89,6 +92,10 @@ ul {
 }
 
 .navigation li a:hover {
+    color: #f06c64;
+}
+
+a.active {
     color: #f06c64;
 }
 
@@ -165,6 +172,11 @@ ul {
 }
 
 /* services */
+
+#services {
+    position: relative;
+    top: -10vh;
+}
 
 .services {
     background-color: #f2f2f2;
@@ -254,6 +266,11 @@ ul {
 }
 
 /* Portfolio */
+
+#portfolio{
+    position: relative;
+    top: -7vh;
+}
 
 .portfolio {
     padding: 9px 0 10px 0;
@@ -383,6 +400,11 @@ ul {
 
 
 /* About */
+
+#about{
+    position: relative;
+    top: -10vh;
+}
 
 .about {
     padding-top: 10px;

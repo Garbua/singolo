@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id = "home">
         <div class="header-flex">
             <div class="header-logo">
-                <a href="#" class="link-logo" name = "home">SINGOLO<span class="header-logo-color">*</span></a>
+                <a href="#" class="link-logo" >SINGOLO<span class="header-logo-color">*</span></a>
             </div>
             <nav class="header-navigation">
-                <ul class="navigation">
-                    <li><a href="#home" class="navigation-home">HOME</a></li>
+                <ul class="navigation" id = "menu">
+                    <li><a href="#home" class="navigation-home active">HOME</a></li>
                     <li><a href="#services" class="navigation-services">SERVICES</a></li>
                     <li><a href="#portfolio" class="navigation-portfolio">PORTFOLIO</a></li>
                     <li><a href="#about" class="navigation-about">ABOUT</a></li>
@@ -40,10 +40,10 @@
             </div>
         </section>
         <div class="image-bottom"></div>
-        <p><a name="services"></a></p>
         <section class="services">
+            <a id="services"></a>
             <article class="our-services">
-                <h1 class="services-title">Our Services</h1>
+                <h1 class="services-title">Our Services</h1> 
                 <p class="services-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             </article>
             <div class="layout-3-colum">
@@ -98,8 +98,8 @@
             </div>
         </section>
         <div class="services-bottom"></div>
-        <p><a name="portfolio"></a></p>
         <section class="portfolio">
+            <a id="portfolio"></a>
             <div class="portfolio_wrapper">
                 <article class="portfolio-title">
                     <h1>Portfolio</h1>
@@ -137,8 +137,8 @@
                 </div>
             </div>
         </section>
-        <p><a name="about"></a></p>
         <section class="about">
+            <a id="about"></a>
             <div class="about_wrapper">
                 <article class="about-title">
                     <h1>About Us</h1>
@@ -203,14 +203,13 @@
                     </section>
                     <section class="contact-info">
                         <div class="info">
-                            <h2 class="info__title">Contact Information</h2>
+                            <h2 class="info__title" id="contact">Contact Information</h2>
                             <p class="info__text">
                                 Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. 
                                 Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, 
                                 et consequat felis. 
                             </p>
                         </div>
-                        <p><a name="contact"></a></p>
                         <div class="contact">
                             <ul class="contact__link-list">
                                 <li class="link-list__item">
@@ -251,5 +250,6 @@
             </ul>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
