@@ -122,7 +122,7 @@
                     <h1>Portfolio</h1>
                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 </article>
-                <ul class="portfolio-filter-buttons">
+                <ul class="portfolio-filter-buttons" id="filters-btn">
                     <li class="filter-button">
                         <button class="filter-param">All</button>
                     </li>
@@ -137,7 +137,7 @@
                     </li>
                 </ul>
                 <div class="portfolio-projects">
-                    <ul class="layout-4colum">
+                    <ul class="layout-4colum" id="portfolio-list">
                         <li class="project-item"></li>
                         <li class="project-item"></li>
                         <li class="project-item"></li>
@@ -210,12 +210,20 @@
                 </article>
                 <div class="get-a-quote__layout">
                     <section class="quote">
-                        <form class="form" action="#" method="post">
+                        <form id="form" class="form" action="#" method="POST">
                             <input class="form__input" type="text" name="name" placeholder="Name (Required)" minlength="3" maxlength="32" required>
                             <input class="form__input" type="email" name="email" placeholder="Email (Required)" maxlength="32" required>
-                            <input class="form__input" type="text" name="subject" placeholder="Subject">
-                            <textarea class="form__textarea" name="description" placeholder="Describe your project in detail..."></textarea>
-                            <button class="form__btn btn-submit" type="submit">Send</button>
+                            <input id="subject" class="form__input" type="text" name="subject" placeholder="Subject">
+                            <textarea id="description" class="form__textarea" name="description" placeholder="Describe your project in detail..."></textarea>
+                            <button id="submit-btn" class="form__btn btn-submit" value="submit" type="button">Send</button>
+                            <div id="message-block" class="hidden">
+                                <div id="message">
+                                    <p><span class="message-text" id="text-name">Письмо отправлено</span></p>
+                                    <p><span class="message-text" id="text-subject"></span></p>
+                                    <p><span class="message-text" id="text-description"></span></p>
+                                    <button id="close-btn">OK</button>
+                                </div>
+                            </div>
                         </form>
                     </section>
                     <section class="contact-info">
