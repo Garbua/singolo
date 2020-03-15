@@ -1,9 +1,15 @@
 const MENU = document.getElementById('menu');
+
 const ARROW_LEFT = document.querySelector('.arrow-left');
 const ARROW_RIGHT = document.querySelector('.arrow-right');
 let sliders = document.querySelectorAll('.carousel .slide');
 let currentSlide = 0;
 let isEnabled = true;
+
+let screenVertical = document.querySelector('.non-screen.vertical');
+let screenHorizontal = document.querySelector('.non-screen.horizontal');
+let iphoneVertical = document.querySelector('.phone-vert');
+let iphoneHorizontal = document.querySelector('.phone-horz');
 
 // Navigation
 
@@ -56,5 +62,23 @@ ARROW_LEFT.addEventListener('click', function() {
 ARROW_RIGHT.addEventListener('click', function() {
     if(isEnabled){
         nextSlide(currentSlide);
+    }
+});
+
+// Screen
+
+iphoneVertical.addEventListener('click', function() {
+    if(screenVertical.classList.contains('opacity')){
+        screenVertical.classList.remove('opacity');
+    }else{
+        screenVertical.classList.add('opacity');
+    }
+});
+
+iphoneHorizontal.addEventListener('click', function() {
+    if(screenHorizontal.classList.contains('opacity')){
+        screenHorizontal.classList.remove('opacity');
+    }else{
+        screenHorizontal.classList.add('opacity');
     }
 });

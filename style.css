@@ -120,6 +120,7 @@ a.active {
     max-width: 1020px;
     width: 100%;
     font-size: 0;
+    background: #f06c64;
 }
 
 .images-container {
@@ -163,7 +164,32 @@ a.active {
 
 .iphone-vertical {
     display: block;
-    margin: 52px 0 59px 112px;
+    margin: 52px 0 -275px 112px;
+}
+
+.non-screen {
+    display: block;
+    position: relative;
+    width: 189px;
+    height: 334px;
+    background: #323746;
+    z-index: 3;
+}
+
+.opacity {
+    opacity: 0;
+}
+
+.vertical {
+    top: -418px;
+    left: 13px;
+}
+
+.horizontal {
+    transform: rotate(90deg);
+    top: -299px;
+    left: 132px;
+    margin-bottom: -334px;
 }
 
 .iphone-horizontal {
