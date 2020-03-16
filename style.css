@@ -164,7 +164,7 @@ a.active {
 
 .iphone-vertical {
     display: block;
-    margin: 52px 0 -275px 112px;
+    margin: 52px 0 -317px 112px;
 }
 
 .non-screen {
@@ -174,6 +174,27 @@ a.active {
     height: 334px;
     background: #323746;
     z-index: 3;
+}
+
+.home1,
+.home2 {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.home1{
+    top: -409px;
+    left: 86px;
+}
+
+.home2{
+    top: -155px;
+    left: 8px;
 }
 
 .opacity {
@@ -195,7 +216,7 @@ a.active {
 .iphone-horizontal {
     display: block;
     align-self: center;
-    margin: -5px 112px 0 0;
+    margin: 37px 112px 0 0;
 }
 
 .arrows {
@@ -284,7 +305,7 @@ a.active {
 
 #services {
     position: relative;
-    top: -10vh;
+    top: -15vh;
 }
 
 .services {
@@ -460,6 +481,10 @@ a.active {
     height: 621px;
 }
 
+.project-item {
+    cursor: pointer;
+}
+
 .layout-4colum li {
     width: 220px;
     height: 207px;
@@ -471,50 +496,62 @@ a.active {
 
 .layout-4colum li:nth-child(1) {
     background: url("./assets/images/portfolio/layer1.png") center no-repeat;
+    order: 1;
 }
 
 .layout-4colum li:nth-child(2) {
     background: url("./assets/images/portfolio/layer2.png") center no-repeat;
+    order: 2;
 }
 
 .layout-4colum li:nth-child(3) {
     background: url("./assets/images/portfolio/layer3.png") center no-repeat;
+    order: 3;
 }
 
 .layout-4colum li:nth-child(4) {
     background: url("./assets/images/portfolio/layer4.png") center no-repeat;
+    order: 4;
 }
 
 .layout-4colum li:nth-child(5) {
     background: url("./assets/images/portfolio/layer5.png") center no-repeat;
+    order: 5;
 }
 
 .layout-4colum li:nth-child(6) {
     background: url("./assets/images/portfolio/layer6.png") center no-repeat;
+    order: 6;
 }
 
 .layout-4colum li:nth-child(7) {
     background: url("./assets/images/portfolio/layer7.png") center no-repeat;
+    order: 7;
 }
 
 .layout-4colum li:nth-child(8) {
     background: url("./assets/images/portfolio/layer8.png") center no-repeat;
+    order: 8;
 }
 
 .layout-4colum li:nth-child(9) {
     background: url("./assets/images/portfolio/layer9.png") center no-repeat;
+    order: 9;
 }
 
 .layout-4colum li:nth-child(10) {
     background: url("./assets/images/portfolio/layer10.png") center no-repeat;
+    order: 10;
 }
 
 .layout-4colum li:nth-child(11) {
     background: url("./assets/images/portfolio/layer11.png") center no-repeat;
+    order: 11;
 }
 
 .layout-4colum li:nth-child(12) {
     background: url("./assets/images/portfolio/layer12.png") center no-repeat;
+    order: 12;
 }
 
 

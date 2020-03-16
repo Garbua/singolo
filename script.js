@@ -8,25 +8,24 @@ let isEnabled = true;
 
 let screenVertical = document.querySelector('.non-screen.vertical');
 let screenHorizontal = document.querySelector('.non-screen.horizontal');
-let iphoneVertical = document.querySelector('.phone-vert');
-let iphoneHorizontal = document.querySelector('.phone-horz');
+let iphoneVertical = document.querySelector('.home1');
+let iphoneHorizontal = document.querySelector('.home2');
 
 let portfolioFilter = document.getElementById('filters-btn');
 let listPortfolio = document.getElementById('portfolio-list');
-let portfolioRandom = [];
 
 const BTN = document.getElementById('submit-btn');
 const CLOSE_BTN = document.getElementById('close-btn');
 const FORM = document.getElementById('form');
 
-// Navigation
+// Navigation  _________________________________________________________________________________
 
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
     event.target.classList.add('active');
 });
 
-// Sliders
+// Sliders  __________________________________________________________________________________
 
 function changeCurrentSlide(n) {
 	currentSlide = (n + sliders.length) % sliders.length;
@@ -73,50 +72,64 @@ ARROW_RIGHT.addEventListener('click', function() {
     }
 });
 
-// Screen
+// Screen ______________________________________________________________________________________________________________________
 
 iphoneVertical.addEventListener('click', function() {
-    if(screenVertical.classList.contains('opacity')){
-        screenVertical.classList.remove('opacity');
-    }else{
-        screenVertical.classList.add('opacity');
-    }
+    screenVertical.classList.toggle('opacity');
 });
 
 iphoneHorizontal.addEventListener('click', function() {
-    // if(screenHorizontal.classList.contains('opacity')){
-    //     screenHorizontal.classList.remove('opacity');
-    // }else{
-    //     screenHorizontal.classList.add('opacity');
-    // }
     screenHorizontal.classList.toggle('opacity');
-    
 });
 
-// Portfolio
+// Portfolio ________________________________________________________________________________________________________________
+
+let pictures = listPortfolio.querySelectorAll('li');
+let randoms = [];
 
 portfolioFilter.addEventListener('click', (ev) => {
     portfolioFilter.querySelectorAll('button').forEach(el => el.classList.remove('filter-active'));
     ev.target.classList.add('filter-active');
+    randoms = shuffleArray(arrIndexes());
+    mixPictures();
 });
 
 listPortfolio.addEventListener('click', (ev) => {
-    listPortfolio.querySelectorAll('li.project-item').forEach(element => element.classList.remove('focus'));
+    listPortfolio.querySelectorAll('.project-item').forEach(element => element.classList.remove('focus'));
     ev.target.classList.add('focus');
 });
 
-// Forms
+function arrIndexes() {
+    let arrIndexes = Array.from(listPortfolio.querySelectorAll('li')).map((item, index, arr) => arr.indexOf(item));
+    return arrIndexes;
+};
+
+function mixPictures() {
+    pictures.forEach((item, index) => {
+        item.style.order = randoms[index];
+    })
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
+// Forms __________________________________________________________________________________________________
 
     BTN.addEventListener('click', (event) => {
+        const subject = document.getElementById('subject').value.toString();
+        const description = document.getElementById('description').value.toString();
+        event.preventDefault();
 
         FORM.addEventListener('click', (event) => {
             event.preventDefault();
         });
-
-        const subject = document.getElementById('subject').value.toString();
-        const description = document.getElementById('description').value.toString();
-
-        event.preventDefault();
 
         if(FORM.checkValidity()){
             if(subject){
@@ -138,7 +151,6 @@ listPortfolio.addEventListener('click', (ev) => {
 
     });
     
-
 CLOSE_BTN.addEventListener('click', () => {
     document.getElementById('text-subject').innerText = '';
     document.getElementById('text-description').innerText = '';
