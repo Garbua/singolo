@@ -10,6 +10,7 @@ html {
     font-size: 10px;
     font-family: "Lato", "Verdana", sans-serif;
     color: #767e9e;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -114,6 +115,11 @@ a.active {
 }
 
 /* Image iphones */
+
+#home {
+    position: relative;
+    top: -15vh;
+}
 
 .carousel {
     position: relative;

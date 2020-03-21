@@ -20,10 +20,27 @@ const FORM = document.getElementById('form');
 
 // Navigation  _________________________________________________________________________________
 
-MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
-});
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    const cursPos = window.scrollY;
+    const sections = document.querySelectorAll('#main>section');
+    
+    sections.forEach((el) => {
+        if( (el.offsetTop - (window.innerHeight * 0.15)) <= cursPos && (el.offsetTop + el.offsetHeight) > cursPos) {
+            MENU.querySelectorAll('a').forEach((a) => {
+                a.classList.remove('active');
+                if(el.querySelector('a').getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                }
+            })
+        }
+    })
+}
+// MENU.addEventListener('click', (event) => {
+//     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
+//     event.target.classList.add('active');
+// });
 
 // Sliders  __________________________________________________________________________________
 
