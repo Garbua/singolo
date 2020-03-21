@@ -131,6 +131,7 @@ a.active {
 
 .images-container {
     display: flex;
+    position: relative;
     flex-direction: row;
     width: 100%;
     overflow: hidden;
@@ -138,11 +139,11 @@ a.active {
 
 .slide {
     display: none;
-    flex-shrink: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
     position: relative;
     animation: 0.5s ease-in-out;
     margin: 0 auto;
-    width: 100%;
 }
 
 .slide-slide2 {
