@@ -26,21 +26,24 @@ function onScroll(event) {
     const cursPos = window.scrollY;
     const sections = document.querySelectorAll('#main>section');
     
-    sections.forEach((el) => {
-        if( (el.offsetTop - (window.innerHeight * 0.15)) <= cursPos && (el.offsetTop + el.offsetHeight) > cursPos) {
-            MENU.querySelectorAll('a').forEach((a) => {
-                a.classList.remove('active');
-                if(el.querySelector('a').getAttribute('id') === a.getAttribute('href').substring(1)) {
-                    a.classList.add('active');
-                }
-            })
+    sections.forEach((el, index) => {
+        if(index == sections.length - 1) {
+            removeAddActive(180);
+        }else{
+            removeAddActive(89);
+        }
+        function removeAddActive(n) {
+            if( el.offsetTop - n <= cursPos && (el.offsetTop + el.offsetHeight) > cursPos ) {
+                MENU.querySelectorAll('a').forEach((a) => {
+                    a.classList.remove('active');
+                    if(el.querySelector('a').getAttribute('id') === a.getAttribute('href').substring(1)) {
+                        a.classList.add('active');
+                    }
+                })
+            }
         }
     })
 }
-// MENU.addEventListener('click', (event) => {
-//     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-//     event.target.classList.add('active');
-// });
 
 // Sliders  __________________________________________________________________________________
 
