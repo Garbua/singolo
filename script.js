@@ -28,12 +28,12 @@ function onScroll(event) {
     
     sections.forEach((el, index) => {
         if(index == sections.length - 1) {
-            removeAddActive(180);
+            removeAddActive(0.3);
         }else{
-            removeAddActive(89);
+            removeAddActive(0.12);
         }
         function removeAddActive(n) {
-            if( el.offsetTop - n <= cursPos && (el.offsetTop + el.offsetHeight) > cursPos ) {
+            if( (el.offsetTop - (window.innerHeight * n)) <= cursPos && (el.offsetTop + el.offsetHeight) > cursPos ) {
                 MENU.querySelectorAll('a').forEach((a) => {
                     a.classList.remove('active');
                     if(el.querySelector('a').getAttribute('id') === a.getAttribute('href').substring(1)) {
