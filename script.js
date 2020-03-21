@@ -155,4 +155,5 @@ CLOSE_BTN.addEventListener('click', () => {
     document.getElementById('text-subject').innerText = '';
     document.getElementById('text-description').innerText = '';
     document.getElementById('message-block').classList.add('hidden');
+    FORM.reset();
 });
