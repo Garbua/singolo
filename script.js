@@ -47,6 +47,8 @@ function onScroll(event) {
 
 // Sliders  __________________________________________________________________________________
 
+let carouselBckg = document.querySelector('.carousel');
+
 function changeCurrentSlide(n) {
 	currentSlide = (n + sliders.length) % sliders.length;
 };
@@ -82,15 +84,29 @@ function previousSlide(n) {
 
 ARROW_LEFT.addEventListener('click', function() {
     if(isEnabled){
+        // redBlue ();
         previousSlide(currentSlide);
     }
 });
 
 ARROW_RIGHT.addEventListener('click', function() {
     if(isEnabled){
+        // redBlue ();
         nextSlide(currentSlide);
     }
 });
+
+// function redBlue () {
+//     if(carouselBckg.classList[1] === 'red'){
+//         carouselBckg.classList.remove('red');
+//         carouselBckg.classList.add('blue');
+//     }else{
+//         if(carouselBckg.classList[1] === 'blue'){
+//             carouselBckg.classList.remove('blue');
+//             carouselBckg.classList.add('red');
+//         }
+//     }
+// }
 
 // Screen ______________________________________________________________________________________________________________________
 
