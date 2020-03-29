@@ -136,7 +136,6 @@ a.active {
     flex-direction: row;
     width: 100%;
     overflow: hidden;
-    transition: 5s;
 }
 
 .slide {
@@ -475,7 +474,7 @@ a.active {
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
-    height: 621px;
+    height: 100%;
 }
 
 .project-item {
@@ -496,6 +495,10 @@ a.active {
 
 .focus {
     border: 5px solid #F06C64;
+}
+
+.layout-4colum li:nth-child(n + 13) {
+    display: none;
 }
 
 .layout-4colum li:nth-child(1) {
@@ -935,10 +938,11 @@ textarea,
     letter-spacing: -0.025rem;
 }
 
+/* ____________________________________1020__________________________________ */
 
 @media (max-width: 1020px) {
 /* *******************Sliders*********************** */
-    .slide-slide2 img {
+.slide-slide2 img {
         width: 100%;
     }
 
@@ -971,6 +975,10 @@ textarea,
 
 .layout-4colum {
     height: 100%;
+}
+
+.portfolio-filter-buttons {
+    margin: 9px 1% 9px 1%;
 }
 
 /* ********************About*********************** */
@@ -1017,8 +1025,22 @@ textarea,
 
 }
 
+/* ____________________________________768__________________________________ */
 
 @media (max-width: 768px) {
+/* *******************Header*********************** */
+.header {
+    padding: 2.7% 4% 1.8% 4%;
+}
+
+.header-navigation {
+    margin-top: -1%;
+}
+
+.navigation li {
+    flex: 1 0 11%;
+}
+
 /* *******************Sliders*********************** */
 .arrows {
         width: 0.8%;
@@ -1063,6 +1085,10 @@ textarea,
 
 .layout-4colum li::before {
     padding-top: 85%;
+}
+
+.portfolio-filter-buttons {
+    margin: 9px 1.5% 9px 1.5%;
 }
 
 /* ********************About*********************** */
@@ -1130,7 +1156,301 @@ textarea,
 }
 }
 
+/* ____________________________________375__________________________________ */
 
 @media (max-width: 375px) {
-     
+/* ***************Header****************** */
+.header {
+    padding: 2.4% 5.5%;
+}
+
+.header.open {
+    padding: 9.5% 5.5%;
+}
+
+.header-bottom {
+    height: 0.15vh;
+    background-color: #323746;
+}
+
+.header-flex {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.header-flex.open {
+    position: fixed;
+    align-items: baseline;
+    background-color: #2d303a;
+    top: 0;
+    left: 0;
+    width: 74.1%;
+    height: 100vh;
+}
+
+main.open {
+    background-color: #2d303a;
+    opacity: 60%;
+}
+
+.header-logo {
+    width: 30%;
+    font-size: 1.9rem;
+    margin: 8% 0 6.5% 0;
+}
+
+.header-logo.open {
+    position: absolute;
+    top: 1.6%;
+    left: 27%;
+}
+
+.header-navigation {
+    width: 39%;
+    margin: 0;
+}
+
+.header-navigation.open {
+    width: 90%;
+    position: relative;
+    top: 3.4%;
+    left: 8%;
+}
+
+.header-navigation::before {
+    content: url("assets/images/header/Burger-menu-icon.svg");
+    cursor: pointer;
+}
+
+.header-navigation.open::before {
+    content: url("assets/images/header/Burger-menu-icon-90.svg");
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.navigation.open {
+    display: block;
+    position: relative;
+    left: 17%;
+    padding-left: 2%;
+    margin-top: 77.4%;
+}
+
+.navigation.open li {
+    width: 40%;
+    height: 15%;
+    margin-bottom: 21.2%;
+    font-size: 2.4rem;
+    letter-spacing: -0.6px;
+}
+
+.navigation li:nth-child(n + 2)::before  {
+    display: none;
+}
+
+/* *******************Sliders*********************** */
+.arrows {
+    width: 1.5%;
+}
+
+.arrows.right {
+    left: 92%;
+}
+
+.arrows.left {
+    left: 3.5%;
+}
+
+.arrow-left,
+.arrow-right {
+border-top: 1vw solid #ca4549;
+border-left: 1vw solid #ca4549;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+border-top: 1vw solid #000000;
+border-left: 1vw solid #000000;
+}
+
+.slide-slide2 {
+    border-bottom: 2px solid rgb(113, 151, 247);
+}
+
+/* *********************Services************************* */
+.our-services {
+    padding: 0;
+}
+
+.layout-3-colum {
+    margin-top: 9.5%;
+}
+
+.colum_icon {
+    padding-left: 0;
+}
+
+.colum_text {
+    padding: 0 10px 0 10px;
+}
+
+.layout-3-colum h2 {
+    margin-bottom: 4.8%;
+}
+
+.layout-3-colum p {
+    padding-right: 3%;
+}
+
+.layout-3-colum article {
+    flex: 1 0 100%;
+    padding-bottom: 8.6%;
+}
+
+.services-bottom {
+    height: 2px;
+}
+
+/* ********************Portfolio*********************** */
+.portfolio_wrapper {
+    margin: 13% 0 13% 0;
+    padding: 0 5.5%;
+}
+
+.portfolio-title {
+    margin: 0 3%;
+}
+
+.portfolio-filter-buttons {
+    margin: 5% 0 5% 3%;
+}
+
+.layout-4colum li {
+    margin: 2.5%;
+    flex: 1 0 44%;
+}
+
+.filter-param {
+    padding: 0 7px 0 7px;
+    margin-right: 0;
+}
+
+.filter-button {
+    margin-right: 3%;
+}
+
+.layout-4colum {
+    margin-top: 2.7%;
+    height: 100%;
+}
+
+.layout-4colum li:nth-child(n + 9) {
+    display: none;
+}
+
+/* ********************About*********************** */
+.about {
+    padding: 0.5% 0 2.5% 0;
+    border-bottom: 0;
+}
+
+.about_wrapper {
+    padding: 0 5.5%;
+}
+
+.about-title {
+    margin: 0 3% 0 3%;
+}
+
+.about h1 {
+    margin-top: 13.5%;
+}
+.layout-3colum {
+    margin: 7.4% 0 0 0;
+    flex-wrap: wrap;
+}
+
+.person {
+    flex: 1 0 92%;
+    margin: 0 2.99% 0 2.99%;
+}
+
+.about-title p {
+    letter-spacing: 0.2px;
+}
+
+.person img {
+    margin-bottom: 5%;
+}
+
+.person p {
+    height: 10%;
+}
+
+.person .social-media {
+    margin: 2% 0 11.7% 0;
+}
+
+/* ********************Get quote*********************** */
+.get-a-quote {
+    padding: 14.5% 0 8% 0;
+}
+
+.get-a-quote_wrapper {
+    padding: 0 5.5%;
+}
+
+.get-a-quote__top {
+    padding: 0 3%;
+}
+
+.top-description {
+    padding-top: 8.5%;
+    margin-bottom: 6.3%;
+}
+
+.get-a-quote__layout {
+    flex-wrap: wrap;
+}
+
+.form__input {
+    margin-bottom: 3.8%;
+    padding: 2.615% 3% 2.615% 3%;
+}
+
+.form__btn {
+    width: 100%;
+    padding: 5% 0;
+}
+
+.contact-info {
+    padding: 9.5% 3% 0 3%;
+    flex: 1 0 100%;
+}
+
+.info__text {
+    margin: 0.7% 0 4% 0;
+    letter-spacing: 0.03rem;
+}
+
+.link-list__item {
+    margin-bottom: 1%;
+}
+
+/* ********************Footer*********************** */
+.footer__copyright {
+    display: none;
+}
+
+.footer__social-media {
+    margin: 0 auto;
+}
 }

@@ -47,8 +47,6 @@ function onScroll(event) {
 
 // Sliders  __________________________________________________________________________________
 
-let carouselBckg = document.querySelector('.carousel');
-
 function changeCurrentSlide(n) {
 	currentSlide = (n + sliders.length) % sliders.length;
 };
@@ -84,29 +82,15 @@ function previousSlide(n) {
 
 ARROW_LEFT.addEventListener('click', function() {
     if(isEnabled){
-        // redBlue ();
         previousSlide(currentSlide);
     }
 });
 
 ARROW_RIGHT.addEventListener('click', function() {
     if(isEnabled){
-        // redBlue ();
         nextSlide(currentSlide);
     }
 });
-
-// function redBlue () {
-//     if(carouselBckg.classList[1] === 'red'){
-//         carouselBckg.classList.remove('red');
-//         carouselBckg.classList.add('blue');
-//     }else{
-//         if(carouselBckg.classList[1] === 'blue'){
-//             carouselBckg.classList.remove('blue');
-//             carouselBckg.classList.add('red');
-//         }
-//     }
-// }
 
 // Screen ______________________________________________________________________________________________________________________
 
@@ -193,3 +177,19 @@ CLOSE_BTN.addEventListener('click', () => {
     document.getElementById('message-block').classList.add('hidden');
     FORM.reset();
 });
+
+// Burger-menu ____________________________________________________________
+
+let burgerMenu = document.querySelector('.header-navigation');
+let headerFlex = document.querySelector('.header-flex');
+let head = document.querySelector('.header');
+let logo = document.querySelector('.header-logo');
+let main = document.getElementById('main');
+burgerMenu.onclick = function() {
+    head.classList.toggle('open');
+    burgerMenu.classList.toggle('open');
+    MENU.classList.toggle('open');
+    main.classList.toggle('open');
+    headerFlex.classList.toggle('open');
+    logo.classList.toggle('open');
+  };
