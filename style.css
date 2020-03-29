@@ -680,6 +680,10 @@ a.active {
 
 
 /* Quote */
+#contact {
+    position: relative;
+    top: -18vh;
+}
 
 .top-title,
 .info__title {
@@ -844,7 +848,7 @@ textarea,
     background-color: #FBC65F;
  }
  
- .btn-submit:hover {
+.btn-submit:hover {
      -webkit-filter: invert(100%);
      transition: 0.5s;
  }
@@ -1286,6 +1290,10 @@ border-left: 1vw solid #000000;
 }
 
 /* *********************Services************************* */
+#services {
+    top: -12vh;
+}
+
 .our-services {
     padding: 0;
 }
@@ -1400,6 +1408,10 @@ border-left: 1vw solid #000000;
 }
 
 /* ********************Get quote*********************** */
+#contact {
+    top: -15vh;
+}
+
 .get-a-quote {
     padding: 14.5% 0 8% 0;
 }
